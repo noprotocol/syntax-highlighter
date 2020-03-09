@@ -50,7 +50,7 @@ class SyntaxHighlighter extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public $schemaVersion = '1.0.1';
 
     // Public Methods
     // =========================================================================
@@ -153,6 +153,6 @@ class SyntaxHighlighter extends Plugin
 
     protected function buildFiles()
     {
-        Craft::$app->getQueue()->delay(0)->push(new BuildFilesTask());
+        Craft::$app->getQueue()->run(new BuildFilesTask());
     }
 }

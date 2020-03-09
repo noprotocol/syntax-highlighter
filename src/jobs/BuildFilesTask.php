@@ -34,7 +34,7 @@ class BuildFilesTask extends BaseJob
         $errors = [];
 
         try {
-            SyntaxHighlighter::$plugin->syntaxHighlighterService->bulidFiles();
+            SyntaxHighlighter::$plugin->syntaxHighlighterService->buildFiles();
         } catch (\Throwable $e) {
             Craft::error('Error building files: ' . $e->getMessage());
         }

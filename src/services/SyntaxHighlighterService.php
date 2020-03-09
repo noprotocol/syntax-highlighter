@@ -132,7 +132,7 @@ class SyntaxHighlighterService extends Component
         return $themes;
     }
     
-    public function bulidFiles()
+    public function buildFiles()
     {
         // BUILD PATH
         if (!defined('SH_DS')) {
